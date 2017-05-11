@@ -60,6 +60,7 @@
     <Compile Include="StronginMethod.cs" />
     <Compile Include="StronginMethodFixed.cs" />
     <Compile Include="UniformSearchMethod.cs" />
+    <Compile Include="UniformSearchMethodEps.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

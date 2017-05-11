@@ -8,9 +8,42 @@ namespace FunctionsOptimization
 {
     class UniformSearchMethod : GeneralMethod
     {
-        public double uncertainty_interval;
+        ////public double uncertainty_interval;
+        //public double error;
+        //protected int n; // число шагов
+        //public  void Init(FunkDelegate _f, double left, double right, int _n)
+        //{
+        //    f = _f;
+        //    a = left;
+        //    b = right;
+        //    n = _n;
+        //    BestTrial = new SearchInformationElement();
+        //    list_of_Trials = new List<SearchInformationElement>();
+        //    list_of_test_points = new List<double>();
+        //    measurement_counterer = 0;
+        //}
+
+        //public override void Run()
+        //{
+        //    BestTrial.SetPoint(a, f(a));
+        //    MakeTrial(a);
+        //    list_of_test_points.Add(a);
+        //    double current_x = a;
+
+        //    for (int i = 1; i < n; i++)
+        //    {
+        //        current_x = a + i * (b - a) / n;
+        //        MakeTrial(current_x);
+        //        list_of_test_points.Add(current_x);
+        //    }
+
+        //    //uncertainty_interval = 2 * (b - a) / (n);
+        //    error = (b - a) / (n + 1);
+        //}
+
+        //public double uncertainty_interval;
         public double error;
-        private int n; // число шагов
+        protected int n; // число шагов
         public  void Init(FunkDelegate _f, double left, double right, int _n)
         {
             f = _f;
@@ -21,24 +54,49 @@ namespace FunctionsOptimization
             list_of_Trials = new List<SearchInformationElement>();
             list_of_test_points = new List<double>();
             measurement_counterer = 0;
-        }
 
+            list_of_interval_characteristic = new List<double>();
+            index_Max_Interval_Characteristic = 0;
+        }
         public override void Run()
         {
             BestTrial.SetPoint(a, f(a));
             MakeTrial(a);
+            MakeTrial(b);
             list_of_test_points.Add(a);
-            double current_x = a;
+            list_of_test_points.Add(b);
+            index_Max_Interval_Characteristic = 1;
 
-            for (int i = 1; i < n; i++)
+            while (!Need_Stop())
             {
-                current_x = a + i * (b - a) / n;
-                MakeTrial(current_x);
-                list_of_test_points.Add(current_x);
+                SortSearchInformation();
+                Calculate_R();
+                double new_point_x = Find_Next_Point();
+                MakeTrial(new_point_x);
+                list_of_test_points.Add(new_point_x);
             }
+        }
+        protected override void SetIntervalCharacteristic(int i)
+        {
+            double delta_x = list_of_Trials[i].GetPoint() - list_of_Trials[i - 1].GetPoint();
+            list_of_interval_characteristic.Add(delta_x);
+        }
+        protected double Find_Next_Point()
+        {
+            double delta_x = list_of_Trials[index_Max_Interval_Characteristic].GetPoint()
+                        + list_of_Trials[index_Max_Interval_Characteristic - 1].GetPoint();
+            double res = 0.5 * delta_x;
 
-            uncertainty_interval = 2 * (b - a) / (n);
-            error = (b - a) / (n);
+            return res;
+        }
+        protected override bool Need_Stop()
+        {
+            // ограничение на число испытаний
+            if (list_of_Trials.Count == n)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
