@@ -37,7 +37,7 @@ namespace FunctionsOptimization
 
             chart_points.Series.Clear();
             chart_points.Legends.Clear();
-            //chart_points.ChartAreas[0].AxisX.Enabled = AxisEnabled.False; // отображение подписей по ОХ в точках
+            chart_points.ChartAreas[0].AxisX.Enabled = AxisEnabled.False; // отображение подписей по ОХ в точках
             Series SeriesOfPointsTests = new Series("Испытания");
             SeriesOfPointsTests.ChartType = SeriesChartType.Line;
             SeriesOfPointsTests.Color = Color.Red;
@@ -104,7 +104,7 @@ namespace FunctionsOptimization
                 {
                     PiyavskyMethod pm = new PiyavskyMethod();
                     pm.Init(function, Convert.ToDouble(textBox_a.Text), Convert.ToDouble(textBox_b.Text),
-                        Convert.ToInt32(textBox_r_piyavsky.Text), Convert.ToDouble(textBox_accuracy.Text));
+                        Convert.ToDouble(textBox_r_piyavsky.Text), Convert.ToDouble(textBox_accuracy.Text));
                     pm.Run();
 
                     for (int i = 0; i < pm.list_of_test_points.Count; i++)
@@ -123,7 +123,7 @@ namespace FunctionsOptimization
                     PiyavskyMethodFixed pm = new PiyavskyMethodFixed();
                     pm.Init(function, Convert.ToInt32(textBox_number_steps.Text),
                         Convert.ToDouble(textBox_a.Text), Convert.ToDouble(textBox_b.Text),
-                        Convert.ToInt32(textBox_r_piyavsky.Text));
+                        Convert.ToDouble(textBox_r_piyavsky.Text));
                     pm.Run();
 
                     for (int i = 0; i < pm.list_of_test_points.Count; i++)
@@ -147,7 +147,7 @@ namespace FunctionsOptimization
                 {
                     StronginMethod sm = new StronginMethod();
                     sm.Init(function, Convert.ToDouble(textBox_a.Text), Convert.ToDouble(textBox_b.Text),
-                            Convert.ToInt32(textBox_r_piyavsky.Text), Convert.ToDouble(textBox_accuracy.Text));
+                            Convert.ToDouble(textBox_r_piyavsky.Text), Convert.ToDouble(textBox_accuracy.Text));
                     sm.Run();
 
 
@@ -167,7 +167,7 @@ namespace FunctionsOptimization
                     StronginMethodFixed sm = new StronginMethodFixed();
                     sm.Init(function, Convert.ToInt32(textBox_number_steps.Text),
                         Convert.ToDouble(textBox_a.Text), Convert.ToDouble(textBox_b.Text),
-                        Convert.ToInt32(textBox_r_piyavsky.Text));
+                        Convert.ToDouble(textBox_r_piyavsky.Text));
                     sm.Run();
 
                     for (int i = 0; i < sm.list_of_test_points.Count; i++)
@@ -184,13 +184,9 @@ namespace FunctionsOptimization
             }
 
             chart_points.Series.Add(SeriesOfPointsTests);
+            //chart_function.Series.Add(SeriesOfPointsTests);
             richTextBox_log.SelectionStart = richTextBox_log.Text.Length;
             richTextBox_log.ScrollToCaret();
-            //}
-            //catch (Exception error)
-            //{
-            //    MessageBox.Show(error.Message);
-            //}
         }
         private void button_drow_function_Click(object sender, EventArgs e)
         {

@@ -62,7 +62,6 @@
             this.textBox_number_steps = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_r_strongin = new System.Windows.Forms.TextBox();
             this.textBox_r_piyavsky = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton_strongin = new System.Windows.Forms.RadioButton();
@@ -224,10 +223,9 @@
             // 
             // radioButton_iteration_stop
             // 
-            this.radioButton_iteration_stop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_iteration_stop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_iteration_stop.AutoSize = true;
-            this.radioButton_iteration_stop.Location = new System.Drawing.Point(46, 27);
+            this.radioButton_iteration_stop.Location = new System.Drawing.Point(28, 27);
             this.radioButton_iteration_stop.Name = "radioButton_iteration_stop";
             this.radioButton_iteration_stop.Size = new System.Drawing.Size(191, 24);
             this.radioButton_iteration_stop.TabIndex = 17;
@@ -237,10 +235,9 @@
             // 
             // radioButton_accuracy_stop
             // 
-            this.radioButton_accuracy_stop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_accuracy_stop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_accuracy_stop.AutoSize = true;
-            this.radioButton_accuracy_stop.Location = new System.Drawing.Point(46, 55);
+            this.radioButton_accuracy_stop.Location = new System.Drawing.Point(28, 57);
             this.radioButton_accuracy_stop.Name = "radioButton_accuracy_stop";
             this.radioButton_accuracy_stop.Size = new System.Drawing.Size(213, 24);
             this.radioButton_accuracy_stop.TabIndex = 18;
@@ -278,15 +275,14 @@
             // 
             // radioButton_uniform_search
             // 
-            this.radioButton_uniform_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_uniform_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_uniform_search.AutoSize = true;
-            this.radioButton_uniform_search.Location = new System.Drawing.Point(46, 35);
+            this.radioButton_uniform_search.Location = new System.Drawing.Point(28, 39);
             this.radioButton_uniform_search.Name = "radioButton_uniform_search";
-            this.radioButton_uniform_search.Size = new System.Drawing.Size(183, 24);
+            this.radioButton_uniform_search.Size = new System.Drawing.Size(161, 24);
             this.radioButton_uniform_search.TabIndex = 22;
             this.radioButton_uniform_search.TabStop = true;
-            this.radioButton_uniform_search.Text = "Равномерная сетка";
+            this.radioButton_uniform_search.Text = "Метод перебора";
             this.radioButton_uniform_search.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -307,9 +303,8 @@
             // 
             // textBox_accuracy
             // 
-            this.textBox_accuracy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_accuracy.Location = new System.Drawing.Point(496, 55);
+            this.textBox_accuracy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_accuracy.Location = new System.Drawing.Point(476, 55);
             this.textBox_accuracy.Name = "textBox_accuracy";
             this.textBox_accuracy.Size = new System.Drawing.Size(88, 26);
             this.textBox_accuracy.TabIndex = 28;
@@ -317,10 +312,9 @@
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(378, 59);
+            this.label13.Location = new System.Drawing.Point(358, 59);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(84, 20);
             this.label13.TabIndex = 27;
@@ -328,10 +322,9 @@
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(378, 29);
+            this.label12.Location = new System.Drawing.Point(358, 29);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(112, 20);
             this.label12.TabIndex = 26;
@@ -339,9 +332,8 @@
             // 
             // textBox_number_steps
             // 
-            this.textBox_number_steps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_number_steps.Location = new System.Drawing.Point(496, 25);
+            this.textBox_number_steps.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_number_steps.Location = new System.Drawing.Point(476, 25);
             this.textBox_number_steps.Name = "textBox_number_steps";
             this.textBox_number_steps.Size = new System.Drawing.Size(88, 26);
             this.textBox_number_steps.TabIndex = 19;
@@ -351,7 +343,6 @@
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox_r_strongin);
             this.groupBox2.Controls.Add(this.textBox_r_piyavsky);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.radioButton_strongin);
@@ -366,30 +357,18 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(313, 115);
+            this.label2.Location = new System.Drawing.Point(312, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 33;
             this.label2.Text = "Надёжность(r) = ";
             // 
-            // textBox_r_strongin
-            // 
-            this.textBox_r_strongin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_r_strongin.Location = new System.Drawing.Point(466, 112);
-            this.textBox_r_strongin.Name = "textBox_r_strongin";
-            this.textBox_r_strongin.Size = new System.Drawing.Size(100, 26);
-            this.textBox_r_strongin.TabIndex = 32;
-            this.textBox_r_strongin.Text = "2";
-            // 
             // textBox_r_piyavsky
             // 
-            this.textBox_r_piyavsky.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_r_piyavsky.Location = new System.Drawing.Point(465, 74);
+            this.textBox_r_piyavsky.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_r_piyavsky.Location = new System.Drawing.Point(464, 77);
             this.textBox_r_piyavsky.Name = "textBox_r_piyavsky";
             this.textBox_r_piyavsky.Size = new System.Drawing.Size(100, 26);
             this.textBox_r_piyavsky.TabIndex = 28;
@@ -397,10 +376,9 @@
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(313, 78);
+            this.label14.Location = new System.Drawing.Point(312, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(137, 20);
             this.label14.TabIndex = 27;
@@ -408,10 +386,9 @@
             // 
             // radioButton_strongin
             // 
-            this.radioButton_strongin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_strongin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_strongin.AutoSize = true;
-            this.radioButton_strongin.Location = new System.Drawing.Point(46, 115);
+            this.radioButton_strongin.Location = new System.Drawing.Point(28, 117);
             this.radioButton_strongin.Name = "radioButton_strongin";
             this.radioButton_strongin.Size = new System.Drawing.Size(170, 24);
             this.radioButton_strongin.TabIndex = 24;
@@ -421,10 +398,9 @@
             // 
             // radioButton_piyavsky
             // 
-            this.radioButton_piyavsky.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton_piyavsky.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton_piyavsky.AutoSize = true;
-            this.radioButton_piyavsky.Location = new System.Drawing.Point(46, 76);
+            this.radioButton_piyavsky.Location = new System.Drawing.Point(28, 78);
             this.radioButton_piyavsky.Name = "radioButton_piyavsky";
             this.radioButton_piyavsky.Size = new System.Drawing.Size(169, 24);
             this.radioButton_piyavsky.TabIndex = 23;
@@ -562,7 +538,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_points;
         private System.Windows.Forms.TextBox textBox_r_piyavsky;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox_r_strongin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_drow_function;
         private System.Windows.Forms.Label label2;

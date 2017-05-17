@@ -46,7 +46,7 @@ namespace FunctionsOptimization
         // Приватные поля
         protected double a;
         protected double b;
-        protected int r;
+        protected double r;
         protected double eps;
         protected FunkDelegate f;
 
@@ -77,7 +77,7 @@ namespace FunctionsOptimization
             }
         }
         public virtual void Init(FunkDelegate _f, double left, double right,
-                                 int _r = 2, double _eps = 0.01)
+                                 double _r = 2, double _eps = 0.01)
         {
             f = _f;
             a = left;
